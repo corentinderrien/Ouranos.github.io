@@ -18,7 +18,6 @@
 			left:0;
 			bottom:0;
 			right:0;
-			padding:20px;
 			background: white;
 			transition: 0.4s;
 			transform: translateX(-100%);
@@ -30,9 +29,17 @@
 			transform: translateX(0);
 		}
 
+        .menu{
+            padding: 10px;
+        }
+
+        .croix{
+            padding: 10px;
+        }
+
         .logo{
                 max-width: 10%;
-                margin-left: 2%;
+                padding: 15px;
             }
 
         .milieu a {
@@ -76,7 +83,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 10%;
+            padding: 5%;
             background-image: url(Arbre_vector.png);
             background-repeat: no-repeat;
             background-position: center;
@@ -98,7 +105,7 @@
             }
 
             .texte1 div{
-                padding: 10px;
+                padding: 5px;
             }
 
             .texte2{
@@ -227,13 +234,18 @@
                 flex-direction: initial;
             }
 
-            button{
+            .menu{
+                display: none;
+            }
+
+            .croix{
                 display: none;
             }
 
             .logo{
                 max-width: 25%;
                 margin-left: 20%;
+                padding: 0px;
             }
 
             .milieu a {
@@ -272,6 +284,10 @@
 
             .connexion a:hover {
                 color: #c67100;
+            }
+
+            .partie1{
+            padding: 10%;
             }
 
             .partie2{
@@ -376,7 +392,7 @@
 <body>
 
     <div class="banniere">
-        <button class="btn" onclick="menu()">Menu</button>
+        <svg onclick="menu()" class="croix" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="auto" viewBox="0 0 123.05 123.05" style="enable-background:new 0 0 30 auto;" xml:space="preserve"><g><path d="M121.325,10.925l-8.5-8.399c-2.3-2.3-6.1-2.3-8.5,0l-42.4,42.399L18.726,1.726c-2.301-2.301-6.101-2.301-8.5,0l-8.5,8.5 c-2.301,2.3-2.301,6.1,0,8.5l43.1,43.1l-42.3,42.5c-2.3,2.3-2.3,6.1,0,8.5l8.5,8.5c2.3,2.3,6.1,2.3,8.5,0l42.399-42.4l42.4,42.4 c2.3,2.3,6.1,2.3,8.5,0l8.5-8.5c2.3-2.3,2.3-6.1,0-8.5l-42.5-42.4l42.4-42.399C123.625,17.125,123.625,13.325,121.325,10.925z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
         <a href="index.html">
             <img class="logo" src="Logo.png" alt="Logo">
         </a>
@@ -413,7 +429,7 @@
         </div>
     </div>
 
-    <button onclick="menu()">Menu</button>
+    <svg onclick="menu()" class="menu" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="auto" viewBox="0 0 124 124" style="enable-background:new 0 0 30 auto;" xml:space="preserve"><g><path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/><path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/><path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
     <div class="partie1">
         
         <header class="texte1">
