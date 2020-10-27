@@ -93,7 +93,7 @@
                 display: flex;
                 text-align: center;
                 justify-content: center;
-                font-size: large;
+                font-size: auto;
                 color: white;
             }
 
@@ -111,21 +111,21 @@
 
             .texte2 div{
                 color: white;
-                font-size: x-large;
+                font-size: auto;
                 font-weight: bold;
                 
             }
 
             .texte3{
                 color: white;
-                font-size: large;
+                font-size: auto;
                 display: flex;
                 justify-content: center;
             }
 
             .texte4{
                 color: white;
-                font-size: medium;
+                font-size: auto;
                 display: flex;
                 justify-content: center;
             }
@@ -135,7 +135,7 @@
                 background-color: white;
                 color: #c67100;
                 font-weight: bold;
-                font-size: large;
+                font-size: auto;
                 display: flex;
                 justify-content: center;
             }
@@ -148,6 +148,7 @@
                 display: flex;
                 justify-content: center;
                 padding: 4%;
+                flex-direction: column;
             }
 
             .partie2 header{
@@ -157,7 +158,7 @@
                 background-color: white;
                 padding: 2%;
                 color: #528CA0;
-                font-size: large;
+                font-size: auto;
                 font-weight: bold;
                 align-items: center;
                 border: 5px inset #c67100;
@@ -168,7 +169,7 @@
             }
 
             .texte{
-                font-size: medium;
+                font-size: auto;
                 font-weight: normal;
             }
 
@@ -184,7 +185,7 @@
 
             .savoir div{
                 padding: 5px;
-                font-size: x-large;
+                font-size: auto;
                 color: black;
                 font-weight: bold;
             }
@@ -194,7 +195,7 @@
                 background: black;
                 border-radius: 40px;
                 font-weight: bold;
-                font-size: medium;
+                font-size: auto;
                 text-decoration: none;
                 color: white;
             }
@@ -204,52 +205,13 @@
             }
 
             .bannierefin{
-                background: grey;
-                display: flex;
-                justify-content: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .bannierefin header{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 3%;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: medium;
-                font-weight: bold;
-                color: white;
-            }
-
-            .bannierefin header div{
-                padding: 10%;
-            }
-
-            .bannierefin header a{
-                font-size: small;
-                text-decoration: none;
-                font-weight: normal;
-                padding: 8%;
-                padding-left: 20px;
-                padding-right: 20px;
-                color: white;
-            }
-
-            .bannierefin header a:hover{
-                color: #c67100;
+                display: none;
             }
 
             .reseaux{
-                background-color: black;
-                display: flex;
-                justify-content: center;
+                display: none;
             }
 
-            .reseaux svg{
-                margin: 1%;
-            }    
 
 
         @media screen and (min-width: 1200px){
@@ -312,7 +274,100 @@
                 color: #c67100;
             }
 
+            .partie2{
+                background-image: url(Arbre_vector.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: flex;
+                justify-content: center;
+                padding: 4%;
+                flex-direction: initial;
+            }
             
+            .texte1{
+                font-size: large;
+            }
+
+            .texte2 div{
+                font-size: x-large;
+            }
+
+            .texte3{
+                font-size: large;
+            }
+
+            .texte4{
+                font-size: medium;
+            }
+
+            .entre{
+                font-size: large;
+            }
+
+            .partie2 header{
+                font-size: large;
+            }
+
+            .texte{
+                font-size: medium;
+            }
+
+            .savoir div{
+                font-size: x-large;
+            }
+
+            .savoir a{
+                font-size: medium;
+            }
+
+            .bannierefin{
+                background: grey;
+                display: flex;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .bannierefin header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 3%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: medium;
+                font-weight: bold;
+                color: white;
+            }
+
+            .bannierefin header div{
+                padding: 10%;
+            }
+
+            .bannierefin header a{
+                font-size: small;
+                text-decoration: none;
+                font-weight: normal;
+                padding: 8%;
+                padding-left: 20px;
+                padding-right: 20px;
+                color: white;
+            }
+
+            .bannierefin header a:hover{
+                color: #c67100;
+            }
+
+            .reseaux{
+                background-color: black;
+                display: flex;
+                justify-content: center;
+            }
+
+            .reseaux svg{
+                margin: 1%;
+            }
         }
 
 
