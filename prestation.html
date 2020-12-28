@@ -3,88 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/commun.css">
     <title>Ouranos</title>
     <style>
-        body{
-            padding: 0px;
-            margin: 0px;
-            background-color: #528CA0;
-            font-family: Sans-serif;
-        }
-
-        .banniere{
-            position: fixed;
-			top:0;
-			left:0;
-			bottom:0;
-			right:0;
-			padding:20px;
-			background: white;
-			transition: 0.4s;
-			transform: translateX(-100%);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .ouvert{
-			transform: translateX(0);
-		}
-
-        .logo{
-                max-width: 10%;
-                margin-left: 2%;
-            }
-
-        .milieu a {
-            display: flex;
-            flex-direction: column;
-            color: black;
-            padding: 25px;
-            text-decoration: none;
-        }
-    
-        .milieu a:hover {
-            background-color: #ddd;
-            color: #c67100;
-        }
-
-        .connexion{
-            background-color:  #4ca7a1  ;
-            border-radius: 30px;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            margin-right: 1%;
-            
-        }
-
-        .connexion a{
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            padding: 5px;
-        }
-
-        .connexion a:hover {
-            color: #c67100;
-        }
-
 
         .partie1{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             margin: 3%;
-            background-image: url(Arbre_vector.png);
+            background-image: url(Images/Arbre_vector.png);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+            margin-top: 120px;
         }
 
-        .partie1 header{
+        .partie1 div{
             margin: 2%;
             margin-left: auto;
             margin-right: auto;
@@ -93,7 +25,7 @@
         .texte1{
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: justify;
             justify-content: left;
             font-size: x-large;
             color: white;
@@ -105,12 +37,8 @@
 
 
         .partie2{
-
             color: #4ca7a1;
             font-size: x-large;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .titre{
@@ -118,6 +46,7 @@
             font-weight: bold;
             font-size: xx-large;
             padding: 2%;
+            text-align: center;
         }
 
         .visuel{
@@ -160,171 +89,68 @@
         }
 
 
-        .bannierefin{
-            background: grey;
-            display: flex;
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .bannierefin header{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 3%;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: medium;
-            font-weight: bold;
-            color: white;
-        }
-
-        .bannierefin header div{
-            padding: 10%;
-        }
-
-        .bannierefin header a{
-            font-size: small;
-            text-decoration: none;
-            font-weight: normal;
-            padding: 8%;
-            padding-left: 20px;
-            padding-right: 20px;
-            color: white;
-        }
-
-        .bannierefin header a:hover{
-            color: #c67100;
-        }
-
-        .reseaux{
-            background-color: black;
-            display: flex;
-            justify-content: center;
-        }
-
-        .reseaux svg{
-            margin: 1%;
-        }
-
         @media screen and (min-width: 1200px){
-            
-            .banniere{
-                transform: translateX(0);
-                position: initial;
+             .partie1{
                 display: flex;
-                justify-content: space-between;
-                padding: 0px;
-                background-color: white;
-                align-items: center;
-                flex-direction: initial;
-            }
+                flex-direction: column;
+                justify-content: center;
+             }
 
-            button{
-                display: none;
-            }
-
-            .logo{
-                max-width: 25%;
-                margin-left: 20%;
-            }
-
-            .milieu a {
-                float: left;
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 36px;
-                text-decoration: none;
-                
-            }
-    
-            .milieu a:hover {
-                background-color: #ddd;
-                color: #c67100;
-            }
-
-            .connexion{
-                background-color:  #4ca7a1  ;
-                border-radius: 30px;
-                color: white;
+             .partie2{
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                padding: 10px;
-                margin-right: 1%;
-            }
+                text-align: justify;
+             }
 
-            .connexion a{
-                float: left;
-                display: block;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                padding: 5px;
-            }
-
-            .connexion a:hover {
-                color: #c67100;
-            }
-
-            
+             .partie2 div{
+                 margin: 2%;
+             }
         }
 
     </style>
 </head>
 <body>
 
-    <div class="banniere">
-        <button class="btn" onclick="menu()">Menu</button>
-        <a href="index.html">
-            <img class="logo" src="Logo.png" alt="Logo">
-        </a>
-        <div class="milieu">
-            <a href="index.html">
-                Accueil
-            </a>
-            <a href="equipe.html">
-                Equipe
-            </a>
-            <a href="realisation.html">
-                Réalisation
-            </a>
-            <a href="aide.html">
-                Aide
-            </a>
-            <a href="prestation.html" style="color:#cc910d">
-                Prestation
-            </a>
-            <a href="contact.html">
-                Contact
-            </a>
-        </div>
-        <div class="connexion">
-            <a href="#">
-                Connexion
-            </a>
-            <div>
-                |
-            </div>
-            <a href="#">
-                Inscription
-            </a>
-        </div>
-    </div>
+    <nav>
+        <ul>
+            <img class="logo" src="Images/Logo.png" width="100%" height="100px">
+            <li> <a class="underline" href="index.html">Accueil</a> </li>
+            <li> <a class="underline" href="equipe.html">Equipe</a> </li>
+            <li> <a class="underline" href="realisation.html">Réalisations</a> </li>
+            <li> <a class="underline" href="aide.html">Aide</a> </li>
+            <li> <a class="underline" href="prestation.html">Prestation</a> </li>
+            <li> <a class="underline" href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
 
-    <button onclick="menu()">Menu</button>
+    <header>
+        <button id="hamburger-button" onclick="menu()">&#9776;</button>
+
+        <a href="index.html" class="headerlogo">
+            <img class="logo" src="Images/Logo.png" width="100%" height="60px">
+        </a>
+        <div class="menupc">
+            <a class="underline" href="index.html">Accueil</a>
+            <a class="underline" href="equipe.html">Equipe</a>
+            <a class="underline" href="realisation.html">Réalisations</a>
+            <a class="underline" href="aide.html">Aide</a>
+            <a class="underline" href="prestation.html">Prestation</a>
+            <a class="underline" href="contact.html">Contact</a>
+        </div>
+    </header>
+
     <div class="partie1">
-        <header class="texte1">
+        <div class="texte1">
             <div class="titre">
                 Pourquoi Ouranos ?
             </div>
             <div>
                 Confier vos projets de graphisme, d’illustration et de design informatique à Ouranos, c’est s’assurer d’avoir un professionnel de la communication et de la création à vos côtés qui sait vous conseiller et vous aiguiller dans les choix graphiques que vous avez à prendre. Nous n’hésiterons pas à vous suggérer des pistes nouvelles. Dès la prise de contact jusqu’à la livraison du projet, Ouranos s’immerge dans votre univers, cerne vos problématiques et propose des projets graphiques adaptés à vos besoins. Chaque projet, chaque client, est traité individuellement. La qualité est mise au cœur de chacune des réalisations graphiques qui vous emmènent toujours plus loin. Le tout, dans la bonne humeur, avec le sourire et un petit grain de folie !
             </div>
-        </header>
+        </div>
 
-        <header class="partie2">
+        <div class="partie2">
             <div class="visuel">
                 <div class="logotext">
                     <div class="titre">
@@ -352,79 +178,35 @@
                 </div>
             </div>
             </div>
-        </header>
+        </div>
     </div>
 
 
 
 
-    <footer class="bannierefin">
-        <header class="ouranos">
-            <div>
-                OURANOS
+    <footer>
+        <div class="footercontact">
+            <div class="reseaux">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="svg/twitter.svg" alt=""></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="svg/instagram.svg" alt=""><a>
             </div>
-            <a href="#">
-                Accueil
-            </a>
-            <a href="#">
-                Offres
-            </a>
-            <a href="#">
-                Designs
-            </a>
-            <a href="#">
-                Aide
-            </a>
-            <a href="#">
-                Présentation
-            </a>
-            <a href="#">
-                Contact
-            </a>
-        </header>
-        <header class="offre">
-            <div>
-                OFFRES
+            <div class="footertexte">
+                ouranos@gmail.com <br>
+                61 Rue Albert Camus,<br> 68200 Mulhouse - (<a href="https://goo.gl/maps/TSnRVutd2NRsDCDg9">Google
+                    Map</a>)
             </div>
-            <a href="#">
-                Logos
-            </a>
-            <a href="#">
-                Affiches Publicitaires
-            </a>
-            <a href="#">
-                Charte Graphique
-            </a>
-        </header>
-        <header class="support">
-            <div>
-                SUPPORT
+        </div>
+        <div class="footer2">
+            <div class="footeradress">2020 © Ouranos<br>
+                Tous droits réservés
             </div>
-            <a href="#">
-                Nous contacter
-            </a>
-            <a href="#">
-                Aide
-            </a>
-            <a href="#">
-                Assistance
-            </a>
-            <a href="#">
-                F.A.Q
-            </a>
-        </header>
+            <div class="mention">
+                <a href="mentionslegales.html">Mentions légales</a>
+            </div>
+
+        </div>
     </footer>
-    <footer class="reseaux">
-        <svg xmlns="http://www.w3.org/2000/svg" height="1.5%" viewBox="-21 -21 682.66669 682.66669" width="1.5%" class="hovered-paths"><g><path d="m604.671875 0h-569.375c-19.496094.0117188-35.30078125 15.824219-35.296875 35.328125v569.375c.0117188 19.496094 15.824219 35.300781 35.328125 35.296875h306.546875v-247.5h-83.125v-96.875h83.125v-71.292969c0-82.675781 50.472656-127.675781 124.222656-127.675781 35.324219 0 65.679688 2.632812 74.527344 3.808594v86.410156h-50.855469c-40.125 0-47.894531 19.066406-47.894531 47.050781v61.699219h95.9375l-12.5 96.875h-83.4375v247.5h162.796875c19.507813.003906 35.324219-15.804688 35.328125-35.3125 0-.003906 0-.007812 0-.015625v-569.375c-.007812-19.496094-15.824219-35.30078125-35.328125-35.296875zm0 0" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/></g> </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="1.5%" viewBox="-21 -117 682.66672 682" width="1.5%" class="hovered-paths"><g><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/></g> </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve" width="1.5%" height="1.5%"><g><g id="XMLID_826_">
-            <path id="XMLID_827_" d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73   c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783   c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598   C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467   c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977   c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889   c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597   c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961   c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895   c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367   c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998   C307.394,57.037,305.009,56.486,302.973,57.388z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-        </g></g> </svg>
-    </footer>
-    <script>
-        function menu(){
-            document.querySelector(".banniere").classList.toggle("ouvert");
-        }
-    </script>
+
+<script src="javascript/script.js"></script>
 </body>
 </html>

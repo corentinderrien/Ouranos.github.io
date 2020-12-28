@@ -1,0 +1,340 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #528CA0;
+    font-family: Sans-serif;
+    color: white;
+}
+
+/****************************/
+/*    Code du Header/menu   */
+/****************************/
+
+header{
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    border-bottom: 4px solid #c67100;
+    top: 0;
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+nav>ul>img{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.menupc{
+    display: none;
+}
+
+.headerlogo{
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    nav {
+        display: none;
+    }
+    header>button,
+    nav>button {
+        display: none;
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        height: 90px;
+        background-color: white;
+        top: 0;
+        z-index: 10;
+        transition: 1s ease-in-out;
+      
+        display: grid;
+        justify-items: right;
+        align-items: center;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+        "headerlogo header";
+
+        animation: header 1s ease-in;
+        animation-fill-mode: forwards;
+    }
+
+    header:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+
+    @keyframes header {
+        0% {opacity: 0%;}
+        50%{opacity: 80%;}
+        100%{opacity: 100%;}
+    }
+
+    .menupc>a {
+        margin: 10px;
+        justify-content: right;
+        display: flex;
+        cursor: pointer;
+        font-size: 20px;
+        animation: scale 1s ease-out;
+        animation-fill-mode: forwards;
+        color: black;
+    }
+
+    .menupc>a:hover {
+        color: #c67100;
+        transition: 1s;
+    }
+
+   .underline::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff9900;
+    box-shadow: 0px 2px 10px #c67100;
+    transition: transform 300ms ease-in-out;
+
+    transform: scaleX(0);
+    }
+
+    .underline:hover::before,
+    .underline:focus::before {
+        transform: scaleX(1);
+    }
+
+    .menupc a::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .menupc a {
+        float: left;
+        position: relative;
+    }
+    
+    .menupc {
+        display: initial;
+        display: flex;
+        padding: 20px;
+        grid-area: header;
+        margin-right: 20px;  
+    }
+
+    .submenu{
+        display: none;
+    }
+    
+    
+    .menupc>a:hover .submenu {
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        padding: 0px;
+        z-index: 100;
+    }
+    
+    .submenu li a{
+        border-bottom: 1px solid #CCC;
+        padding: 15px;
+        font-size: 13px;
+        color: white;
+        width: 270px;
+    }
+
+    .headerlogo{
+        position: sticky;
+        grid-area: headerlogo;
+        margin: 20px;
+        display: initial;
+        transition: 1s ease-in-out;
+    }
+    .headerlogo:hover{
+        transform: scale(1.1);
+        
+    }
+    .headerlogo img{
+        transform: scale(0);
+        opacity: 0;
+        animation: scale 1s ease-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes scale {
+        100% {opacity: 1;transform: scale(1);}}
+
+    
+        
+}
+
+
+.ouvert {
+    transform: translate(0);
+    background: #4ca7a1;
+}
+
+#hamburger,
+#hamburger-content {
+    display: inline;
+}
+
+#hamburger-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+    padding: 0;
+    vertical-align: top;
+    line-height: 77px;
+    float: right;
+    animation: 1s;
+    color: black;
+}
+
+.burger2 {
+    transform: rotate(90°);
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: block;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+li:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    border: 2px solid red;
+}
+
+li:first-child:before {
+    background-image: url("home.svg");
+
+}
+
+li:nth-child(2):before {
+    background-image: url("lieu.svg");
+}
+
+li:nth-child(3):before {
+    background-image: url("forum.svg");
+
+}
+
+li:nth-child(4):before {
+    background-image: url("contact.svg");
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+/****************************/
+/*       Code du footer     */
+/****************************/
+
+footer{
+    transition: 500ms ease-in-out;
+    margin-top: 145px;
+} 
+
+.footercontact{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    color: white;
+    background-color: rgb(131, 131, 131);
+    padding: 10px;
+    padding-right: 50px;
+    border-top: 7px solid #c67100;
+}
+
+.reseaux{
+    display: flex;
+    flex-direction: initial;
+    padding-left: 70px;
+}
+
+.reseaux a img{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 35px;
+}
+
+.footertext{
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer2{
+    background-color: #353535;
+    color: #c67100;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer2 div a{
+    text-decoration: none;
+}
+
+.footeradress{
+    text-align: center;
+}
+
+footer:hover{
+    box-shadow: 0px 0px 10em rgba(0,0,0,0.19);
+}
