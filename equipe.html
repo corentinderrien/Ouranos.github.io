@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/commun.css">
     <title>Ouranos</title>
     <style>
-
-        .partie1{
+        .partie1 {
             margin-top: 120px;
         }
 
-        .trombinoscope{
+        .trombinoscope {
             display: flex;
             justify-content: center;
         }
 
-        .pc{
+        .pc {
             display: none;
             height: 90vh;
             max-width: 100%;
             max-height: 100%;
         }
 
-        .tel{
+        .tel {
             max-width: 100%;
             max-height: 100%;
         }
 
+        .presentation {
+            display: block;
+            margin: 50px;
+            padding: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.24);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
 
-        @media screen and (min-width: 1200px){
-            .pc{
+        .presentation div {
+            margin-top: 20px;
+            font-size: 20px;
+          
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            .pc {
                 display: initial;
+                transition: 2s ease-out;
             }
 
-            .tel{
+            .pc:hover{
+                transform: scale(0.95);
+            }
+            .tel {
                 display: none;
             }
 
+            .presentation {
+                display: flex;
+                margin: 90px;
+            }
 
+            .presentation div {
+                margin: 20px;
+                font-size: 25px;
+                display: flex;
+            }
         }
     </style>
 </head>
-<body>
 
+<body onclick=moveCible(event)>
+    <div id=Cible></div>
+    
     <nav>
         <ul>
             <img class="logo" src="Images/Logo.png" width="100%" height="100px">
@@ -51,7 +80,7 @@
             <li> <a class="underline" href="equipe.html">Equipe</a> </li>
             <li> <a class="underline" href="realisation.html">Réalisations</a> </li>
             <li> <a class="underline" href="aide.html">Aide</a> </li>
-            <li> <a class="underline" href="prestation.html">Prestation</a> </li>
+            <li> <a class="underline" href="prestation.html">Prestations</a> </li>
             <li> <a class="underline" href="contact.html">Contact</a> </li>
         </ul>
     </nav>
@@ -67,7 +96,7 @@
             <a class="underline" href="equipe.html">Equipe</a>
             <a class="underline" href="realisation.html">Réalisations</a>
             <a class="underline" href="aide.html">Aide</a>
-            <a class="underline" href="prestation.html">Prestation</a>
+            <a class="underline" href="prestation.html">Prestations</a>
             <a class="underline" href="contact.html">Contact</a>
         </div>
     </header>
@@ -77,7 +106,17 @@
             <img class="pc" src="Images/Trombinoscope.png" alt="Trombinoscope">
             <img class="tel" src="Images/Trombinoscopetel.png" alt="Trombinoscope">
         </div>
-
+        <div class="presentation">
+            <div>Souriante et dynamique, Anna est passionnée par la communication institutionnelle et digitale, la
+                rédaction web et parle couramment anglais. Elle a le sens de l’écoute, l’esprit de synthèse et analyse
+                tous les besoins des clients en prêtant attention à chaque détail.</div>
+            <div>Créatif et à l’écoute, Maxime est passionné par l’art et le web design. Il accompagne les clients en
+                leur proposant des créations mêlant esthétisme et modernisme pour leur fournir des supports de
+                communications uniques, originaux et à la pointe des dernières tendances. </div>
+            <div>Plein d’énergie et d’idées nouvelles, Corentin est passionné par le développement web et le graphisme.
+                Il met au service ses compétences pour proposer aux clients des supports de communication uniques
+                adaptés à leurs besoins. </div>
+        </div>
     </div>
 
 
@@ -104,6 +143,7 @@
         </div>
     </footer>
 
-<script src="javascript/script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
+
 </html>

@@ -4,6 +4,11 @@ body{
     background-color: #528CA0;
     font-family: Sans-serif;
     color: white;
+    position:  relative;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 /****************************/
@@ -353,3 +358,44 @@ footer:hover{
         margin: 10px;
     }
 }
+
+/****************************/
+/*       Test pointeur      */
+/****************************/		
+    #Cible{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100px;
+        height:100px;
+        border:50px solid rgb(255, 123, 0);
+        border-radius:100%;
+        margin:-50px;
+        transform: translate(-100px, 0);
+        pointer-events: none;
+        z-index: 1000;
+    }
+    
+    .nuit #Cible{
+        border-color: var(--color-claire);
+    }
+    .anim_Cible{
+        animation: cible 0.5s ease;
+        animation-fill-mode: forwards;
+    }
+    @keyframes cible{
+        0%{
+            border-width:50px;
+            opacity:0;
+        }
+        100%{
+            border-width:0px;
+            opacity:0.5;
+        }
+    }
+
+
+/****************************/
+/*       Animation body     */
+/****************************/
+

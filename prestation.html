@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/commun.css">
     <title>Ouranos</title>
     <style>
-
-        .partie1{
+        .partie1 {
             margin: 3%;
             background-image: url(Images/Arbre_vector.png);
             background-repeat: no-repeat;
@@ -16,13 +16,13 @@
             margin-top: 120px;
         }
 
-        .partie1 div{
+        .partie1 div {
             margin: 2%;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .texte1{
+        .texte1 {
             display: flex;
             flex-direction: column;
             text-align: justify;
@@ -31,44 +31,36 @@
             color: white;
         }
 
-        .texte1 div{
+        .texte1 div {
             padding: 10px;
         }
 
 
-        .partie2{
+        .partie2 {
             color: #4ca7a1;
             font-size: large;
             text-align: justify;
         }
 
-        .titre{
+        .titre {
+            cursor: context-menu;
             color: #c67100;
             font-weight: bold;
             font-size: x-large;
             padding: 2%;
             text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .visuel{
+        .visuel {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        .logotext{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 1%;
-            background-color: white;
-            padding: 3%;
-            border: inset #c67100 5px;
-        }
-
-        .graphique{
+        .logotext {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -77,9 +69,24 @@
             background-color: white;
             padding: 3%;
             border: inset #c67100 5px;
+            border-radius: 20px;
+            transition: 400ms ease-in;
         }
 
-        .web{
+        .graphique {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            background-color: white;
+            padding: 3%;
+            border: inset #c67100 5px;
+            border-radius: 20px;
+            transition: 400ms ease-in;
+        }
+
+        .web {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -87,41 +94,71 @@
             background-color: white;
             padding: 3%;
             border: inset #c67100 5px;
+            border-radius: 20px;
+            transition: 400ms ease-in;
+        }
+
+        .partie2 .logotext:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .partie2 .graphique:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .partie2 .web:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .p1 {
+            background-color: #2DCEC550;
+            border-radius: 20px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
 
 
-        @media screen and (min-width: 1200px){
-             .partie1{
+        @media screen and (min-width: 1200px) {
+            .partie1 {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-             }
+            }
 
-             .texte1{
+            .texte1 {
                 font-size: x-large;
-             }
+            }
 
-             .partie2{
+            .partie2 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: justify;
                 font-size: x-large;
-             }
+            }
 
-             .partie2 div{
-                 margin: 2%;
-                 
-             }
+            .partie2 div {
+                margin: 2%;
 
-             .titre{
-            font-size: xx-large;
+            }
+
+            .titre {
+                font-size: xx-large;
+            }
         }
-        }
-
     </style>
 </head>
-<body>
+
+<body onclick=moveCible(event)>
+    <div id=Cible></div>
 
     <nav>
         <ul>
@@ -130,7 +167,7 @@
             <li> <a class="underline" href="equipe.html">Equipe</a> </li>
             <li> <a class="underline" href="realisation.html">Réalisations</a> </li>
             <li> <a class="underline" href="aide.html">Aide</a> </li>
-            <li> <a class="underline" href="prestation.html">Prestation</a> </li>
+            <li> <a class="underline" href="prestation.html">Prestations</a> </li>
             <li> <a class="underline" href="contact.html">Contact</a> </li>
         </ul>
     </nav>
@@ -146,7 +183,7 @@
             <a class="underline" href="equipe.html">Equipe</a>
             <a class="underline" href="realisation.html">Réalisations</a>
             <a class="underline" href="aide.html">Aide</a>
-            <a class="underline" href="prestation.html">Prestation</a>
+            <a class="underline" href="prestation.html">Prestations</a>
             <a class="underline" href="contact.html">Contact</a>
         </div>
     </header>
@@ -156,8 +193,15 @@
             <div class="titre">
                 Pourquoi Ouranos ?
             </div>
-            <div>
-                Confier vos projets de graphisme, d’illustration et de design informatique à Ouranos, c’est s’assurer d’avoir un professionnel de la communication et de la création à vos côtés qui sait vous conseiller et vous aiguiller dans les choix graphiques que vous avez à prendre. Nous n’hésiterons pas à vous suggérer des pistes nouvelles. Dès la prise de contact jusqu’à la livraison du projet, Ouranos s’immerge dans votre univers, cerne vos problématiques et propose des projets graphiques adaptés à vos besoins. Chaque projet, chaque client, est traité individuellement. La qualité est mise au cœur de chacune des réalisations graphiques qui vous emmènent toujours plus loin. Le tout, dans la bonne humeur, avec le sourire et un petit grain de folie !
+            <div class="p1">
+                Confier vos projets de graphisme, d’illustration et de design informatique à Ouranos, c’est s’assurer
+                d’avoir un professionnel de la communication et de la création à vos côtés qui sait vous conseiller et
+                vous aiguiller dans les choix graphiques que vous avez à prendre. Nous n’hésiterons pas à vous suggérer
+                des pistes nouvelles. Dès la prise de contact jusqu’à la livraison du projet, Ouranos s’immerge dans
+                votre univers, cerne vos problématiques et propose des projets graphiques adaptés à vos besoins. Chaque
+                projet, chaque client, est traité individuellement. La qualité est mise au cœur de chacune des
+                réalisations graphiques qui vous emmènent toujours plus loin. Le tout, dans la bonne humeur, avec le
+                sourire et un petit grain de folie !
             </div>
         </div>
 
@@ -168,7 +212,10 @@
                         LOGO
                     </div>
                     <div>
-                        L’identité visuelle est l’essence même d’une entreprise. Ne passez pas à côté de votre cible faute d’éléments graphiques percutants. L’identité visuelle doit ressembler à votre entreprise, représenter ses valeurs, capter l’attention. Ouranos vous accompagne et vous concocte une identité visuelle qui vous ressemble,  efficace, cohérente et pérenne.
+                        L’identité visuelle est l’essence même d’une entreprise. Ne passez pas à côté de votre cible
+                        faute d’éléments graphiques percutants. L’identité visuelle doit ressembler à votre entreprise,
+                        représenter ses valeurs, capter l’attention. Ouranos vous accompagne et vous concocte une
+                        identité visuelle qui vous ressemble, efficace, cohérente et pérenne.
                     </div>
                 </div>
                 <div class="graphique">
@@ -176,7 +223,13 @@
                         CHARTE GRAPHIQUE
                     </div>
                     <div>
-                        L’identité visuelle est l’essence même d’une entreprise. Ne passez pas à côté de votre cible faute d’éléments graphiques percutants. L’identité visuelle doit ressembler à votre entreprise, représenter ses valeurs, capter l’attention. Ouranos vous accompagne et vous concocte une identité visuelle qui vous ressemble,  efficace, cohérente et pérenne.
+                        L’identité visuelle est l’essence même d’une entreprise. Ne passez pas à côté de votre cible
+                        faute d’éléments graphiques percutants ! L’identité visuelle doit ressembler à votre entreprise,
+                        représenter ses valeurs et capter l’attention afin d’avoir une image de marque forte. Ouranos
+                        vous accompagne et vous concocte une identité visuelle unique qui vous ressemble, efficace et
+                        cohérente en vous conseillant sur le message le plus optimal et les visuels les plus marquants.
+                        Étant conscients de l’importance de chaque détail, nous vous proposons un travail de qualité
+                        pour satisfaire vos besoins.
                     </div>
                 </div>
             </div>
@@ -185,11 +238,14 @@
                     DEVELOPPEMENT WEB
                 </div>
                 <div>
-                    Aujourd’hui avoir un site web est incontournable pour communiquer et augmenter votre notoriété. Ouranos intervient en amont de la création du site en vous proposant une maquette de site web en adéquation avec le positionnement de votre société. Ouranos réalise également votre site web après nous avoir validé la maquette. Le tout en respectant votre univers graphique.
+                    Nous créons des sites internet sur-mesure pour répondre à vos attentes et à vos besoins.
+                    Ouranos s'engage à vous créer un site web rapide, complet, responsive, avec une excellente
+                    expérience utilisateur, de sa conception à la mise en place d’une stratégie de référencement.
+
                 </div>
             </div>
-            </div>
         </div>
+    </div>
     </div>
 
 
@@ -218,6 +274,7 @@
         </div>
     </footer>
 
-<script src="javascript/script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
+
 </html>

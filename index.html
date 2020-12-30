@@ -1,177 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/commun.css">
     <title>Ouranos</title>
     <style>
+        .partie1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-image: url(Images/Arbre_vector.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-top: 120px;
+            height: 600px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
 
-            .partie1{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                background-image: url(Images/Arbre_vector.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                margin-top: 120px;
+        .partie1 div {
+            margin: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .texte {
+            font-size: auto;
+            font-weight: normal;
+            transition: 400ms ease-in;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .title1 {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            transition: 500ms ease-in-out;
+            background-color: #c6710050;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .title1 div {
+            padding: 5px;
+        }
+
+        .title2 {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 145, 0);
+            border-radius: 10px 50px / 50px;
+            transition: 500ms ease-in;
+        }
+
+        .title2 div {
+            color: #1b0f00;
+            font-size: auto;
+            font-weight: bold;
+        }
+
+        .title2:hover {
+            transform: scale(1.05);
+            background: rgba(255, 145, 0, 0.8);
+            cursor: pointer;
+        }
+
+        .title3 {
+            color: white;
+            font-size: auto;
+            align-items: center;
+            justify-content: center;
+            transition: 500ms ease-in-out;
+            background-color: #c6710050;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .title4 {
+            color: white;
+            font-size: auto;
+            display: flex;
+            justify-content: center;
+            background-color: #c6710050;
+            transition: 500ms ease-in-out;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+
+
+        .entre {
+            padding: 35px;
+            background-color: white;
+            color: #c67100;
+            font-weight: bold;
+            font-size: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .partie2 {
+            background-image: url(Images/Arbre_vector.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            padding: 4%;
+            flex-direction: column;
+
+        }
+
+        .partie2 div {
+            display: flex;
+            flex-direction: column;
+            margin: 2%;
+            background-color: white;
+            padding: 2%;
+            color: #528CA0;
+            font-size: auto;
+            font-weight: bold;
+            align-items: center;
+            border: 5px inset #c67100;
+            border-radius: 20px;
+            transition: 500ms ease-in-out;
+        }
+
+        .partie2 .affiche:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .partie2 .textlogo:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .partie2 .charte:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        .partie2 div div {
+            padding: 4%;
+            border: none;
+            text-align: justify;
+        }
+
+        .titre {
+            font-size: 20px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        .savoir {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8%;
+        }
+
+        .savoir1 {
+            color: #ee8945;
+            margin-bottom: 50px;
+            font-size: 40px;
+            display: flex;
+            text-align: center;
+        }
+
+        .savoir2 {
+            color: white;
+            font-size: auto;
+            font-weight: bold;
+            align-items: center;
+            display: flex;
+            text-align: center;
+        }
+
+
+        .entre {
+            height: 100px;
+            background-color: rgb(0, 91, 107);
+        }
+
+
+        @media screen and (min-width: 1200px) {
+
+            .partie1 {
+                height: 87vh;
+                font-size: 30px;
             }
 
-            .partie1 div{
-                margin: 2%;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
+            .partie2 {
+                flex-direction: initial;
             }
 
-            .texte1{
-                display: flex;
-                text-align: center;
-                justify-content: center;
+            .texte {
                 font-size: auto;
-                color: white;
+                font-weight: normal;
+                transition: 400ms ease-in;
+                box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
             }
 
-            .texte1 div{
+            .title1 {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                font-size: 20px;
+                color: white;
+                transition: 500ms ease-in-out;
+                background-color: #c6710050;
+                border-radius: 20px;
                 padding: 5px;
             }
 
-            .texte2{
+            .title1 div {
+                padding: 5px;
+            }
+
+            .title2 {
                 display: flex;
                 justify-content: center;
                 padding: 20px;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 40px;
+                background: rgba(255, 145, 0);
+                border-radius: 10px 50px / 50px;
+                transition: 500ms ease-in;
             }
 
-            .texte2 div{
-                color: white;
+            .title2 div {
+                color: #1b0f00;
                 font-size: auto;
                 font-weight: bold;
-                
             }
 
-            .texte3{
+            .title2:hover {
+                transform: scale(1.05);
+                background: rgba(255, 145, 0, 0.8);
+                cursor: pointer;
+            }
+
+            .title3 {
                 color: white;
                 font-size: auto;
                 align-items: center;
                 justify-content: center;
-            }
-
-            .texte4{
-                color: white;
-                font-size: auto;
-                display: flex;
-                justify-content: center;
-            }
-
-            .entre{
-                padding: 35px;
-                background-color: white;
-                color: #c67100;
-                font-weight: bold;
-                font-size: auto;
-                display: flex;
-                justify-content: center;
-            }
-
-            .partie2{
-                background-image: url(Images/Arbre_vector.png);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                display: flex;
-                justify-content: center;
-                padding: 4%;
-                flex-direction: column;
-            }
-
-            .partie2 div{
-                display: flex;
-                flex-direction: column;
-                margin: 2%;
-                background-color: white;
-                padding: 2%;
-                color: #528CA0;
-                font-size: auto;
-                font-weight: bold;
-                align-items: center;
-                border: 5px inset #c67100;
-            }
-
-            .partie2 div div{
-                padding: 4%;
-                border: none;
-                text-align: justify;
-            }
-
-            .titre{
-                font-size: 20px;
-            }
-
-            .texte{
-                font-size: auto;
-                font-weight: normal;
-            }
-
-            .savoir{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 2%;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 8%;
-            }
-
-            .savoir div{
+                transition: 500ms ease-in-out;
+                background-color: #c6710050;
+                border-radius: 20px;
                 padding: 5px;
-                font-size: auto;
-                color: black;
-                font-weight: bold;
             }
 
-            .savoir a{
-                padding: 5px;
-                background: black;
-                border-radius: 40px;
-                font-weight: bold;
-                font-size: auto;
-                text-decoration: none;
+            .title4 {
                 color: white;
-            }
-
-            .savoir a:hover{
-                color: #c67100;
-            }
-
-            .entre{
-                padding: 35px;
-                background-color: white;
-                color: #c67100;
-                font-weight: bold;
                 font-size: auto;
                 display: flex;
                 justify-content: center;
+                background-color: #c6710050;
+                transition: 500ms ease-in-out;
+                border-radius: 20px;
+                padding: 5px;
             }
 
-            @media screen and (min-width: 1200px) {
-
-                .partie1{
-                    height: 87vh;
-                    font-size: 30px;
-                }
-
-                .partie2{
-                flex-direction: initial;
-                }
-
-            }
-
+        }
     </style>
 </head>
-<body>
+
+<body onclick=moveCible(event)>
+    <div id=Cible></div>
 
     <nav>
         <ul>
@@ -180,7 +292,7 @@
             <li> <a class="underline" href="equipe.html">Equipe</a> </li>
             <li> <a class="underline" href="realisation.html">Réalisations</a> </li>
             <li> <a class="underline" href="aide.html">Aide</a> </li>
-            <li> <a class="underline" href="prestation.html">Prestation</a> </li>
+            <li> <a class="underline" href="prestation.html">Prestations</a> </li>
             <li> <a class="underline" href="contact.html">Contact</a> </li>
         </ul>
     </nav>
@@ -196,14 +308,14 @@
             <a class="underline" href="equipe.html">Equipe</a>
             <a class="underline" href="realisation.html">Réalisations</a>
             <a class="underline" href="aide.html">Aide</a>
-            <a class="underline" href="prestation.html">Prestation</a>
+            <a class="underline" href="prestation.html">Prestations</a>
             <a class="underline" href="contact.html">Contact</a>
         </div>
     </header>
 
     <div class="partie1">
-        
-        <div class="texte1">
+
+        <div class="title1">
             <div>
                 CHARTE GRAPHIQUE
             </div>
@@ -221,24 +333,24 @@
             </div>
         </div>
 
-        <div class="texte2">
+        <div class="title2">
             <div>
                 CREER VOTRE IDENTITE VISUELLE !
             </div>
         </div>
 
-        <div class="texte3">
+        <div class="title3">
             Visuel Pro & Site Complexe
         </div>
 
-        <div class="texte4">
+        <div class="title4">
             L'agence OURANOS vous accompagne jusqu'à l'accomplissement de votre projet !
         </div>
-        
+
     </div>
 
     <div class="entre">
-        OURANOS
+
     </div>
 
     <div class="partie2">
@@ -247,7 +359,12 @@
                 CHARTE GRAPHIQUE
             </div>
             <div class="texte">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida enim nulla. Aliquam dapibus ultrices augue, sit amet tincidunt ex venenatis vel. Nam pellentesque nec neque vitae cursus. Cras tempus sodales aliquam. Fusce efficitur arcu at porttitor pulvinar. Maecenas dignissim dolor leo, eget aliquet neque lobortis id. In vitae gravida orci, at interdum velit. Nunc nec sapien et ligula pretium ultrices vel ac neque. Vestibulum ut mi dictum, egestas sapien sit amet, tincidunt est. Quisque ullamcorper neque eu orci laoreet commodo.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                L’identité visuelle est l’essence même d’une entreprise. Ne passez pas à côté de votre cible faute
+                d’éléments graphiques percutants ! L’identité visuelle doit ressembler à votre entreprise, représenter
+                ses valeurs et capter l’attention afin d’avoir une image de marque forte. Ouranos vous accompagne et
+                vous concocte une identité visuelle unique qui vous ressemble, efficace et cohérente en vous conseillant
+                sur le message le plus optimal et les visuels les plus marquants. Étant conscients de l’importance de
+                chaque détail, nous vous proposons un travail de qualité pour satisfaire vos besoins.
             </div>
         </div>
         <div class="textlogo">
@@ -255,7 +372,11 @@
                 LOGO
             </div>
             <div class="texte">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida enim nulla. Aliquam dapibus ultrices augue, sit amet tincidunt ex venenatis vel. Nam pellentesque nec neque vitae cursus. Cras tempus sodales aliquam. Fusce efficitur arcu at porttitor pulvinar. Maecenas dignissim dolor leo, eget aliquet neque lobortis id. In vitae gravida orci, at interdum velit. Nunc nec sapien et ligula pretium ultrices vel ac neque. Vestibulum ut mi dictum, egestas sapien sit amet, tincidunt est. Quisque ullamcorper neque eu orci laoreet commodo.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Votre logo est est la première image véhiculée par votre entreprise : il doit ressembler à votre
+                entreprise, représenter ses valeurs, capter l’attention et surtout être unique et esthétique ! Ouranos
+                s’engage à vous créer un logo qui vous ressemble et à le décliner pour une adaptation parfaite aux
+                différents supports tout en vous conseillant sur le message le plus optimal et les visuels les plus
+                marquants.
             </div>
         </div>
         <div class="affiche">
@@ -263,20 +384,26 @@
                 AFFICHE PUBLICITAIRE
             </div>
             <div class="texte">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida enim nulla. Aliquam dapibus ultrices augue, sit amet tincidunt ex venenatis vel. Nam pellentesque nec neque vitae cursus. Cras tempus sodales aliquam. Fusce efficitur arcu at porttitor pulvinar. Maecenas dignissim dolor leo, eget aliquet neque lobortis id. In vitae gravida orci, at interdum velit. Nunc nec sapien et ligula pretium ultrices vel ac neque. Vestibulum ut mi dictum, egestas sapien sit amet, tincidunt est. Quisque ullamcorper neque eu orci laoreet commodo.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nous mettons en œuvre nos compétences en graphisme et en design pour réaliser des affiches publicitaires
+                alliant esthétisme, impact et innovation dans le but de répondre à vos besoins et objectifs. Ouranos
+                vous accompagne dans la création de votre campagne de publicité, de la création graphique, en passant
+                par l’achat d’espace, jusqu’à l’impression.
             </div>
         </div>
     </div>
 
-        <div class="entre">
-            OURANOS
+    <div class="entre">
+
+    </div>
+    <div class="savoir">
+        <div class="savoir1">
+            POURQUOI OURANOS ?
         </div>
-        <div class="savoir">
-            <div>
-                POURQUOI OURANOS ?
-            </div>
-            <a href="#"> EN SAVOIR PLUS</a>
-        </div>
+        <div class="savoir2"> Ouranos vous accompagne dans l’élaboration de votre projet, en regroupant un ensemble de
+            prestations pour
+            vous offrir des contenus uniques. Nous sommes spécialisées dans le domaine de la communication visuelle,
+            ainsi que dans le développement web. </div>
+    </div>
 
 
     <footer>
@@ -302,6 +429,8 @@
         </div>
     </footer>
 
-<script src="javascript/script.js"></script>
+
+    <script src="javascript/script.js"></script>
 </body>
+
 </html>
