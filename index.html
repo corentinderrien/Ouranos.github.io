@@ -19,6 +19,15 @@
             height: 600px;
             margin-left: 20px;
             margin-right: 20px;
+            filter: blur(1px);
+            transition: 1s linear;
+            filter: grayscale(80%);
+        }
+
+        .partie1:hover{
+            filter: blur(0px);
+            transform: scale(0.98);
+            filter: grayscale(0%);
         }
 
         .partie1 div {
@@ -45,6 +54,7 @@
             background-color: #c6710050;
             border-radius: 20px;
             padding: 5px;
+            
         }
 
         .title1 div {
@@ -185,6 +195,7 @@
             text-align: center;
         }
 
+
         .savoir2 {
             color: white;
             font-size: auto;
@@ -284,6 +295,8 @@
 
 <body onclick=moveCible(event)>
     <div id=Cible></div>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
 
     <nav>
         <ul>
@@ -409,8 +422,8 @@
     <footer>
         <div class="footercontact">
             <div class="reseaux">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="svg/twitter.svg" alt=""></a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="svg/instagram.svg" alt=""><a>
+                <a href="https://twitter.com/AgenceOuranos" target="_blank"><img src="svg/twitter.svg" alt=""></a>
+                <a href="https://www.instagram.com/agenceouranos/" target="_blank"><img src="svg/instagram.svg" alt=""><a>
             </div>
             <div class="footertexte">
                 ouranos@gmail.com <br>
