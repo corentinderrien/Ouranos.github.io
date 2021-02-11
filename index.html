@@ -2,224 +2,452 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./style/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
-  <title>Refonte Site lieu insolite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/commun.css">
+    <link rel="icon" href="Images/Logo.png">
+    <title>Ouranos</title>
+    <style>
+        .partiee1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-image: url(Images/Arbre_vector.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-top: 120px;
+            height: 600px;
+            margin-left: 20px;
+            margin-right: 20px;
+            filter: blur(1px);
+            transition: 1s linear;
+            filter: grayscale(80%);
+        }
+
+        .partiee1:hover {
+            filter: blur(0px);
+            transform: scale(0.98);
+            filter: grayscale(0%);
+        }
+
+        .partiee1 div {
+            margin: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .texte {
+            font-size: auto;
+            font-weight: normal;
+            transition: 400ms ease-in;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .title1 {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            transition: 500ms ease-in-out;
+            background-color: #c6710050;
+            border-radius: 20px;
+            padding: 5px;
+
+        }
+
+        .title1 div {
+            padding: 5px;
+        }
+
+        .title2 {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 145, 0);
+            border-radius: 10px 50px / 50px;
+            transition: 500ms ease-in;
+        }
+
+        .title2 div {
+            color: #1b0f00;
+            font-size: auto;
+            font-weight: bold;
+        }
+
+        .title2:hover {
+            transform: scale(1.05);
+            background: rgba(255, 145, 0, 0.8);
+            cursor: pointer;
+        }
+
+        .title3 {
+            color: white;
+            font-size: auto;
+            align-items: center;
+            justify-content: center;
+            transition: 500ms ease-in-out;
+            background-color: #c6710050;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .title4 {
+            color: white;
+            font-size: auto;
+            display: flex;
+            justify-content: center;
+            background-color: #c6710050;
+            transition: 500ms ease-in-out;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+
+
+        .entre {
+            padding: 35px;
+            background-color: white;
+            color: #c67100;
+            font-weight: bold;
+            font-size: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .partie2 {
+            background-image: url(Images/Arbre_vector.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            padding: 4%;
+            flex-direction: column;
+
+        }
+
+        .partie2 div {
+            display: flex;
+            flex-direction: column;
+            margin: 2%;
+            background-color: white;
+            padding: 2%;
+            color: #528CA0;
+            font-size: auto;
+            font-weight: bold;
+            align-items: center;
+            border: 5px inset #c67100;
+            border-radius: 20px;
+            transition: 500ms ease-in-out;
+        }
+
+        .partie2 .affiche:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .partie2 .textlogo:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .partie2 .charte:hover {
+            cursor: pointer;
+            background-color: #ee8945;
+            transform: scale(1.01);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        .partie2 div div {
+            padding: 4%;
+            border: none;
+            text-align: justify;
+        }
+
+        .titre {
+            font-size: 20px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        .savoir {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8%;
+        }
+
+        .savoir1 {
+            color: #ee8945;
+            margin-bottom: 50px;
+            font-size: 40px;
+            display: flex;
+            text-align: center;
+        }
+
+
+        .savoir2 {
+            color: white;
+            font-size: auto;
+            font-weight: bold;
+            align-items: center;
+            display: flex;
+            text-align: center;
+        }
+
+
+        .entre {
+            height: 100px;
+            background-color: rgb(0, 91, 107);
+        }
+
+
+        @media screen and (min-width: 1200px) {
+
+            .partiee1 {
+                height: 87vh;
+                font-size: 30px;
+            }
+
+            .partie2 {
+                flex-direction: initial;
+            }
+
+            .texte {
+                font-size: auto;
+                font-weight: normal;
+                transition: 400ms ease-in;
+                box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .title1 {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                font-size: 20px;
+                color: white;
+                transition: 500ms ease-in-out;
+                background-color: #c6710050;
+                border-radius: 20px;
+                padding: 5px;
+            }
+
+            .title1 div {
+                padding: 5px;
+            }
+
+            .title2 {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                background: rgba(255, 145, 0);
+                border-radius: 10px 50px / 50px;
+                transition: 500ms ease-in;
+            }
+
+            .title2 div {
+                color: #1b0f00;
+                font-size: auto;
+                font-weight: bold;
+            }
+
+            .title2:hover {
+                transform: scale(1.05);
+                background: rgba(255, 145, 0, 0.8);
+                cursor: pointer;
+            }
+
+            .title3 {
+                color: white;
+                font-size: auto;
+                align-items: center;
+                justify-content: center;
+                transition: 500ms ease-in-out;
+                background-color: #c6710050;
+                border-radius: 20px;
+                padding: 5px;
+            }
+
+            .title4 {
+                color: white;
+                font-size: auto;
+                display: flex;
+                justify-content: center;
+                background-color: #c6710050;
+                transition: 500ms ease-in-out;
+                border-radius: 20px;
+                padding: 5px;
+            }
+
+            .charte {
+                transform-style: preserve-3d;
+            }
+        }
+    </style>
 </head>
 
-<body>
-  <!-- NAVIGATION -->
-  <nav class="navbar" id="navbar">
-    <img src="../svg/fichier1.svg" width="100%" height="100px">
-    <div class="navbar-menu">
-      <a class="nav-link" href="#">Accueil</a>
-      <a class="nav-link" href="#lieux">Lieux</a>
-      <a class="nav-link" href="#event">Evenement</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </div>
-  </nav>
+<body onclick=moveCible(event)>
+    <div id=Cible></div>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
 
-  <!-- ACCUEIL -->
-  <section class="fristcontent">
-    <div class="background-parallax"></div>
-    <div class="decouverte">
-      <strong>Vous aimez découvrir de nouveaux lieux ?</strong>
-    </div>
+    <nav>
+        <ul>
+            <img class="logo" src="Images/Logo.png" width="100%" height="100px">
+            <li> <a class="underline" href="index.html">Accueil</a> </li>
+            <li> <a class="underline" href="equipe.html">Equipe</a> </li>
+            <li> <a class="underline" href="realisation.html">Réalisations</a> </li>
+            <li> <a class="underline" href="aide.html">Aide</a> </li>
+            <li> <a class="underline" href="prestation.html">Prestations</a> </li>
+            <li> <a class="underline" href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
 
-    <div class="txtaccueil">
-      <p>
-        L’Alsace est une destination idéale, car elle regorge d'innombrables lieux à découvrir. <br>
-        Originalité, féérie, témoignage du passé ou encore rencontre inoubliable, des lieux insolites qui sortent de
-        l'ordinaire n’attendent qu’à être découvert. <br>
-        <br>
-        Alors qu’attendez-vous? Explorez ces lieux et repartez avec des souvenirs gravés à jamais !
-      </p>
+    <header>
+        <button id="hamburger-button" onclick="menu()">&#9776;</button>
 
-      <a href="#lieux"><strong>Découvrir notre sélection</strong></a>
-
-    </div>
-
-  </section>
-
-  <!-- LIEUX -->
-  <section class="split" id="lieux">
-    <div class="screen">
-      <div class="content">
-        <h2>L'écomusée d'Alsace</h2>
-        <p><strong>L’Écomusée d’Alsace</strong> à Ungersheim, est un véritable <strong>musée à ciel ouvert</strong> qui
-          permet aux visiteurs de découvrir la vie quotidienne d’antan et la richesse de l’architecture alsacienne.</p>
-      </div>
-    </div>
-
-    <div class="screen">
-      <div class="content">
-        <h2>Mon Univers</h2>
-        <p><strong>Mon Univers</strong> à Mulhouse, est une boutique sur le thème du monde magique de la saga
-          <strong>Harry Potter</strong>, proposant de nombreux objets emblématiques, mais aussi un salon de thé qui
-          ravit les papilles.
-        </p>
-      </div>
-    </div>
-
-    <div class="screen">
-      <div class="content">
-        <h2>La Montagne des Singes</h2>
-        <p><strong>La Montagne des singes</strong> est un parc animalier situé dans la commune de Kintzheim, dans lequel
-          on peut observer plus de 240 singes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EVENEMENT -->
-  <section class="event" id="event">
-    <!-- Swiper -->
-    <div class="swiper-container">
-      <div class="parallax-bg" data-swiper-parallax="-23%"></div>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-800">L'écomusée d'Alsace</div>
-          <div class="subtitle" data-swiper-parallax="-500">Noêl ouvre ses portes !</div>
-          <div class="text" data-swiper-parallax="-200">
-            <p>L'Ecomusée d'Alsace s'anime en fonction des saisons. La période de Noël est la période la plus 
-              chaleureuse et sans doute la plus gourmande de l'année ! Dans ce musée vivant des arts populaires 
-              et des traditions alsaciennes, on découvre l'ambiance des Noëls d'antan, ressuscitée de la manière 
-              la plus authentique qui soit. Vin chaud, bredalas, jeux dans la neige ...<br> Découvrez l'esprit et 
-              l'authenticité des Noëls conviviaux alsaciens permettant à chaque visiteur se sente comme chez lui !</p>
-          </div>
-          <img src="img/noel_ecomusee.jpg">
+        <a href="index.html" class="headerlogo">
+            <img class="logo" src="Images/Logo.png" width="100%" height="60px">
+        </a>
+        <div class="menupc">
+            <a class="underline" href="index.html">Accueil</a>
+            <a class="underline" href="equipe.html">Equipe</a>
+            <a class="underline" href="realisation.html">Réalisations</a>
+            <a class="underline" href="aide.html">Aide</a>
+            <a class="underline" href="prestation.html">Prestations</a>
+            <a class="underline" href="contact.html">Contact</a>
         </div>
-        <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-500" data-swiper-parallax-opacity="0">Mon Univers</div>
-          <div class="subtitle" data-swiper-parallax="-200">Rencontre avec un acteur</div>
-          <div class="text" data-swiper-parallax="-100">
-            <p>Venez rencontrer Devon Murray, l'acteur qui interprète Seamus Finnigan dans la célèbre saga "Harry Potter"
-               Réservez votre créneau horaire entre 10h30 et 17h30 pour rencontrer le jeune sorcier qui fait tout exploser.
-               Plusieurs options sont proposées : un autographe et/ou une photo ainsi qu'un forfait "Sorcier confirmé" 
-               avec la baguette de Seamus Finnigan ! <br> Une recontre mémorable ! </p>
-          </div>
-          <img src="img/mon_univers_acteur.jpg">
+    </header>
+
+    <div class="partiee1">
+            <div class="title1">
+                <div>
+                    CHARTE GRAPHIQUE
+                </div>
+                <div>
+                    |
+                </div>
+                <div>
+                    LOGO
+                </div>
+                <div>
+                    |
+                </div>
+                <div>
+                    AFFICHE PUBLICITAIRE
+                </div>
+            </div>
+
+            <div class="title2">
+                <div>
+                    CREER VOTRE IDENTITE VISUELLE !
+                </div>
+            </div>
+
+            <div class="title3">
+                Visuel Pro & Site Complexe
+            </div>
+
+            <div class="title4">
+                L'agence OURANOS vous accompagne jusqu'à l'accomplissement de votre projet !
+            </div>
         </div>
-        <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-500">La Montagne des Singes</div>
-          <div class="subtitle" data-swiper-parallax="-200">Donnez à manger aux singes !</div>
-          <div class="text" data-swiper-parallax="-100">
-            <p>Vivez une expérience unique en famille en nourrissant les singes avec du popcorn offert à l'entrée.
-              Pariculièrement attachants, très curieux et vraiment gourmands, les singes n’hésiteront pas à s’approcher de vous.
-              La proximité incroyable est donc incroyable et vous permettra de découvrir de très près ces animaux en vivant une 
-              expérience immersive et inoubliable <br> Rendez-vous dès maintenant !</p>
-          </div>
-          <img src="img/montagnes_des_singes_nourriture.jpg">
+    </div>
+
+    <div class="entre">
+
+    </div>
+
+    <div class="partie2">
+        <div class="charte">
+            <div class="titre">
+                CHARTE GRAPHIQUE
+            </div>
+            <div class="texte">
+                L’identité visuelle est l’essence même d’une entreprise. Ne passez pas à côté de votre cible faute
+                d’éléments graphiques percutants ! L’identité visuelle doit ressembler à votre entreprise, représenter
+                ses valeurs et capter l’attention afin d’avoir une image de marque forte. Ouranos vous accompagne et
+                vous concocte une identité visuelle unique qui vous ressemble, efficace et cohérente en vous conseillant
+                sur le message le plus optimal et les visuels les plus marquants. Étant conscients de l’importance de
+                chaque détail, nous vous proposons un travail de qualité pour satisfaire vos besoins.
+            </div>
         </div>
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination swiper-pagination-white"></div>
-      <!-- Add Navigation -->
-      <div class="swiper-button-prev swiper-button-white"></div>
-      <div class="swiper-button-next swiper-button-white"></div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-
-    <h1 class="tagline_contact">Contactez-nous !</h1>
-    <div class="formulaire_contact">
-      <div class="intro">Une question ? Une suggestion ? <br>L'équipe de Hopla répondra <br>avec plaisir à votre
-        demande.</div>
-
-      <h3>Formulaire de contact</h3>
-      <div class="container">
-        <form>
-          <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Name</label>
-          </div>
-
-          <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Email</label>
-          </div>
-          <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Numéro</label>
-          </div>
-          <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Objet</label>
-          </div>
-        </form>
-      </div>
+        <div class="textlogo">
+            <div class="titre">
+                LOGO
+            </div>
+            <div class="texte">
+                Votre logo est est la première image véhiculée par votre entreprise : il doit ressembler à votre
+                entreprise, représenter ses valeurs, capter l’attention et surtout être unique et esthétique ! Ouranos
+                s’engage à vous créer un logo qui vous ressemble et à le décliner pour une adaptation parfaite aux
+                différents supports tout en vous conseillant sur le message le plus optimal et les visuels les plus
+                marquants.
+            </div>
+        </div>
+        <div class="affiche">
+            <div class="titre">
+                AFFICHE PUBLICITAIRE
+            </div>
+            <div class="texte">
+                Nous mettons en œuvre nos compétences en graphisme et en design pour réaliser des affiches publicitaires
+                alliant esthétisme, impact et innovation dans le but de répondre à vos besoins et objectifs. Ouranos
+                vous accompagne dans la création de votre campagne de publicité, de la création graphique, en passant
+                par l’achat d’espace, jusqu’à l’impression.
+            </div>
+        </div>
     </div>
 
-    <div class="coordonnees">
-      <div id="mapid">
-        <script>
-          var mymap = L.map('mapid').setView([47.73039799153764, 7.301120582922567], 13);
+    <div class="entre">
 
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          }).addTo(mymap);
-
-          var MMI = L.icon({
-            iconUrl: 'https://www.flaticon.com/svg/static/icons/svg/854/854853.svg',
-
-            iconSize: [30, 30], // size of the icon
-            shadowSize: [50, 64], // size of the shadow
-          });
-          L.marker([47.729799, 7.301740], { icon: MMI }).addTo(mymap)
-            .bindPopup('<div class="popup"><strong>Adresse :</strong><br> 61 Rue Albert Camus,<br> 68200 Mulhouse.</div>')
-            .openPopup();;
-
-          
-        </script>
-      </div>
     </div>
-  </section>
+    <div class="savoir">
+        <div class="savoir1">
+            POURQUOI OURANOS ?
+        </div>
+        <div class="savoir2"> Ouranos vous accompagne dans l’élaboration de votre projet, en regroupant un ensemble de
+            prestations pour
+            vous offrir des contenus uniques. Nous sommes spécialisées dans le domaine de la communication visuelle,
+            ainsi que dans le développement web. </div>
+    </div>
 
-  <section class="footer" id="footer"></section>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <footer>
+        <div class="footercontact">
+            <div class="reseaux">
+                <a href="https://twitter.com/AgenceOuranos" target="_blank"><img src="svg/twitter.svg" alt=""></a>
+                <a href="https://www.instagram.com/agenceouranos/" target="_blank"><img src="svg/instagram.svg"
+                        alt=""><a>
+            </div>
+            <div class="footertexte">
+                ouranos@gmail.com <br>
+                61 Rue Albert Camus,<br> 68200 Mulhouse - (<a href="https://goo.gl/maps/TSnRVutd2NRsDCDg9">Google
+                    Map</a>)
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="footeradress">2020 © Ouranos<br>
+                Tous droits réservés
+            </div>
+            <div class="mention">
+                <a href="mentionslegales.html">Mentions légales</a>
+            </div>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      speed: 1000,
-      parallax: true,
-      autoplay: {
-        delay: 500000000, //règle le temps pour changer un slide
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+        </div>
+    </footer>
 
-  </script>
 
+    <script src="javascript/script.js"></script>
 </body>
-<script src="java/javascript.js"></script>
 
 </html>
